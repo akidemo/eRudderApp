@@ -1,0 +1,14 @@
+{
+  "name": "eRudderApp",
+  "version": "0.0.1",
+  "description": "eRudder App",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "~3.4.4",
+    "jade": "~1.1.4"
+  },
+  "devDependencies": {},
+  "private": true
+}
