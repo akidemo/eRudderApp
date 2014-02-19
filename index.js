@@ -14,6 +14,7 @@ var express=require('express');
 var app=express();
 app.set('views', __dirname + '/views');
 app.use('/Search/static',express.static(__dirname + '/public'));
+app.use('/Search/static/detalle',express.static(__dirname + '/public/detalle.html'));
 app.set('view engine', 'jade');
 app.set('view options', {layout: false});
 app.use(express.favicon());

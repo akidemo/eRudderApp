@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="searchApp">
+<head>
+  <meta charset="utf-8">
+  <title>Buscador ofertas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="angular-resource.min.js"></script>
+  <script type="text/javascript" src="angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="services.js"></script>
+  <script type="text/javascript" src="controllers/event.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="lib/js/bootstrap.min.js"></script>
+  <script src="ui-bootstrap-tpls-0.10.0.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="lib/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="lib/css/simple-sidebar.css">
+
+  <style>
+  .miclass{
+    text-align: right;
+  }
+  .oferta-detalle-title{
+    font-weight:bold; 
+    font-size:10pt;
+  }
+  
+  </style>
+</head>
+<body>
+
+<div ng-controller="SearchCtrl">
+
+ <div id="wrapper">
+        <!-- Sidebar -->
+        <!--Mirar esta web para slide left menu http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/-->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand" style="margin-top:-2px "><a href="#">LOGO</a>
+                </li>
+                <li><a href="ofertas.html"><i class="glyphicon glyphicon-list-alt"></i> Ofertas</a>
+                </li>
+                <li><a href="clientes.html"><i class="glyphicon glyphicon-user"></i> Clientes</a>
+                </li>
+                <li><a href="catalogo.html"><i class="glyphicon glyphicon-th"></i> Catalogo</a>
+                </li>
+                <li><a href="perfil.html"><i class="glyphicon glyphicon-user"></i> Perfil</a>
+                </li>
+            </ul>
+        </div>
+
+  <!-- Page content -->
+  <div id="page-content-wrapper">
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Clientes</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="">
+     
+      <ul class="nav navbar-nav navbar-right">
+       
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    <ul  class="list-group">
+      <li class="list-group-item" style="cursor:pointer;" onclick="location.href='editlinea.html'">
+        <div class="row">
+          <div class="col-xs-3">
+            Cód. art. 1102                
+          </div>
+          <div class="col-xs-5" >
+            Limpieza labavos
+          </div>
+          <div class="col-xs-4" style="text-align:right">                
+            1.200$
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item" style="cursor:pointer;" onclick="location.href='editlinea.html'">
+        <div class="row">
+          <div class="col-xs-3">
+            Cód. art. 1102                
+          </div>
+          <div class="col-xs-5" >
+            Limpieza labavos
+          </div>
+          <div class="col-xs-4" style="text-align:right">                
+            1.200$
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item" style="cursor:pointer;" onclick="location.href='editlinea.html'">
+        <div class="row">
+          <div class="col-xs-3">
+            Cód. art. 1102                
+          </div>
+          <div class="col-xs-5" >
+            Limpieza labavos
+          </div>
+          <div class="col-xs-4" style="text-align:right">                
+            1.200$
+          </div>
+        </div>
+      </li>
+      
+    </ul>
+
+    <div class="gridStyle" ng-grid="tab.grid"></div>   
+    <footer ng-include="'templates/footer.html'"></footer>
+    
+    <div ng-view></div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
