@@ -19,7 +19,6 @@
   <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="lib/css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="lib/css/simple-sidebar.css">
-  <link rel="stylesheet" type="text/css" href="mystyle.css">
 
   <style>
   .miclass{
@@ -28,6 +27,10 @@
   .oferta-detalle-title{
     font-weight:bold; 
     font-size:10pt;
+  }
+
+  .catalogo-articulo-nombre{
+    font-weight:bold;
   }
   
   </style>
@@ -67,7 +70,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Clientes</a>
+      <a class="navbar-brand" href="#">Modificar perfil</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,58 +78,43 @@
      
       <ul class="nav navbar-nav navbar-right">
        
-        
+        <li class="dropdown">
+          <a href="perfil.html">
+          <button class="btn btn-default btn-xs">Volver</button>
+          </a>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-<form class="form-horizontal" role="form" style="margin-top:15px">
-          <div class="form-group has-feedback">
 
-            <div class="col-xs-12">
-              <input type="text" class="form-control" id="inputSuccess3" placeholder="Buscar cliente">
-              <span class="glyphicon glyphicon-search form-control-feedback"></span>
-            </div>
-                      </div>
-        </form>
+<form role="form" style="padding:15px">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Tipo usuario</label>
+   <div class="radio " id="exampleInputEmail1">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Comercial
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        Técnico
+      </label>
+    </div>
+  </div>
+  <div class="form-group ">
+    <label for="exampleInputPassword1">Nombre</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Antonio Machado">
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
 
-     <ul  class="list-group">
-      <li class="list-group-item" style="cursor:pointer;" onclick="location.href='detallecliente.html'">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" src="img/empty-image.png" alt="..." width="50px" height="50px">
-          </a>
-          <div class="media-body catalogo-articulo-nombre" style="">
-            Nombre cliente 1 <span class="badge pull-right">2</span>
-            <p style="font-weight:normal"><i>NIF/CIF, Dirección, teléfono, ...</i></p>
-          </div>
-        </div>
-      </li>
-      <li class="list-group-item" style="cursor:pointer;" onclick="location.href='detallecliente.html'">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" src="img/empty-image.png" alt="..." width="50px" height="50px">
-          </a>
-          <div class="media-body catalogo-articulo-nombre">
-            Nombre cliente 2 
-            <p style="font-weight:normal"><i>NIF/CIF, Dirección, teléfono, ...</i></p>
-          </div>
-        </div>
-      </li>
-      <li class="list-group-item" style="cursor:pointer;" onclick="location.href='detallecliente.html'">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" src="img/empty-image.png" alt="..." width="50px" height="50px">
-          </a>
-          <div class="media-body catalogo-articulo-nombre">
-            Nombre cliente 3
-            <p style="font-weight:normal"><i>NIF/CIF, Dirección, teléfono, ...</i></p>
-          </div>
-        </div>
-      </li>
-      
-    </ul>
+
+
+
     <div class="gridStyle" ng-grid="tab.grid"></div>   
     <footer ng-include="'templates/footer.html'"></footer>
     

@@ -19,7 +19,6 @@
   <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="lib/css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="lib/css/simple-sidebar.css">
-  <link rel="stylesheet" type="text/css" href="mystyle.css">
 
   <style>
   .miclass{
@@ -28,6 +27,10 @@
   .oferta-detalle-title{
     font-weight:bold; 
     font-size:10pt;
+  }
+
+  .catalogo-articulo-nombre{
+    font-weight:bold;
   }
   
   </style>
@@ -67,7 +70,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Clientes</a>
+      <a class="navbar-brand" href="#">Perfil</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,52 +84,34 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<form class="form-horizontal" role="form" style="margin-top:15px">
-          <div class="form-group has-feedback">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Usuario</h3>
+  </div>
+  <div class="panel-body">
+    <p><span style="font-weight:bold">Tipo:</span> Comercial</p>
+    <p><span style="font-weight:bold">Nombre:</span> Antonio Machado</p>    
+    <!--<p><span style="font-weight:bold">Correo electrónico:</span> antonioma@gmail.com</p>-->
+    <a href="modificarperfil.html">
+      <button class="btn btn-primary btn-sm">Modificar</button>
+    </a>
+  </div>
+</div>
 
-            <div class="col-xs-12">
-              <input type="text" class="form-control" id="inputSuccess3" placeholder="Buscar cliente">
-              <span class="glyphicon glyphicon-search form-control-feedback"></span>
-            </div>
-                      </div>
-        </form>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Sistema</h3>
+  </div>
+  <div class="panel-body">
+    <p><span style="font-weight:bold">App version:</span> 0.1v</p>
+    <p><span style="font-weight:bold">Phonegap version:</span> 2.4v</p>
+    <p><span style="font-weight:bold">Mobile platform:</span> Android</p>
+    <p><span style="font-weight:bold">Platform version:</span> 2.2v</p>
 
-     <ul  class="list-group">
-      <li class="list-group-item" style="cursor:pointer;" onclick="location.href='detallecliente.html'">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" src="img/empty-image.png" alt="..." width="50px" height="50px">
-          </a>
-          <div class="media-body catalogo-articulo-nombre" style="">
-            Nombre cliente 1 <span class="badge pull-right">2</span>
-            <p style="font-weight:normal"><i>NIF/CIF, Dirección, teléfono, ...</i></p>
-          </div>
-        </div>
-      </li>
-      <li class="list-group-item" style="cursor:pointer;" onclick="location.href='detallecliente.html'">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" src="img/empty-image.png" alt="..." width="50px" height="50px">
-          </a>
-          <div class="media-body catalogo-articulo-nombre">
-            Nombre cliente 2 
-            <p style="font-weight:normal"><i>NIF/CIF, Dirección, teléfono, ...</i></p>
-          </div>
-        </div>
-      </li>
-      <li class="list-group-item" style="cursor:pointer;" onclick="location.href='detallecliente.html'">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" src="img/empty-image.png" alt="..." width="50px" height="50px">
-          </a>
-          <div class="media-body catalogo-articulo-nombre">
-            Nombre cliente 3
-            <p style="font-weight:normal"><i>NIF/CIF, Dirección, teléfono, ...</i></p>
-          </div>
-        </div>
-      </li>
-      
-    </ul>
+
+  </div>
+</div>
+
     <div class="gridStyle" ng-grid="tab.grid"></div>   
     <footer ng-include="'templates/footer.html'"></footer>
     
